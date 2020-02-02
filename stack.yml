@@ -1,0 +1,13 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: https://af9507ae.ngrok.io
+functions:
+  bot:
+    lang: pyslack
+    handler: ./bot
+    image: theaxer/test-bot:latest
+    secrets:
+      - slack-api-token
+      - slack-signing-secret
+

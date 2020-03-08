@@ -2,6 +2,10 @@ version: 1.0
 provider:
   name: openfaas
   gateway: https://lucasr.exit.openfaas.pro
+configuration:
+  templates:
+    - name: pyslash
+      source: https://github.com/LucasRoesler/openfaas-slack-bot
 functions:
   bot:
     lang: pyslash

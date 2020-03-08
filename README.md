@@ -2,9 +2,19 @@
 
 ## Usage
 
-1. `faas-cli new bot --lang=pyslash`
-2. Wite your command logic in `./bot/handler.py`
+1. `faas-cli template pull faas-cli template pull https://github.com/LucasRoesler/openfaas-slack-bot`
+2. `faas-cli new bot --lang=pyslash`
+3. Update the stack file to include the template configuration
+```yaml
+configuration:
+  templates:
+    - name: pyslash
+      source: https://github.com/LucasRoesler/openfaas-slack-bot
+```
+3. Wite your command logic in `./bot/handler.py`
 
+
+## Writing slash commands
 The abosolute smallest example slash command looks like this
 
 ```py

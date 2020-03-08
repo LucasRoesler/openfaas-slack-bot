@@ -43,10 +43,12 @@ class Slacker:
                         "response_type": "ephemeral",
                         "text": "invalid request",
                     })
+
                 try:
+                    logger.debug("running slash_cmd handler")
                     return await handler(request)
                 except Exception as e:
-                    logger.error("validation failed", exc_info=e)
+                    logger.error("handler failed", exc_info=e)
                     return text("server error", 500)
 
             return handler_wrapper

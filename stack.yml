@@ -1,10 +1,10 @@
 version: 1.0
 provider:
   name: openfaas
-  gateway: https://af9507ae.ngrok.io
+  gateway: https://lucasr.exit.openfaas.pro
 functions:
   bot:
-    lang: pyslack
+    lang: pyslash
     handler: ./bot
     image: theaxer/test-bot:latest
     secrets:

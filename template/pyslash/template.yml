@@ -1,2 +1,2 @@
-language: pyslack
+language: pyslash
 fprocess: python index.py

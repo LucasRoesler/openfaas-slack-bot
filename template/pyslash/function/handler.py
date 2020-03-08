@@ -14,6 +14,7 @@ bot = Slacker(
     signing_secret=secrets.slack_signing_secret,
 )
 
+
 # this would be called by the `/hello` slash command.
 #
 # To add new slash commands, go back to your app

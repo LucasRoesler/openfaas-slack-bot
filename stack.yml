@@ -4,7 +4,7 @@ provider:
   gateway: https://af9507ae.ngrok.io
 functions:
   bot:
-    lang: pyslack
+    lang: pyslash
     handler: ./bot
     image: theaxer/test-bot:latest
     secrets:

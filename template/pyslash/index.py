@@ -1,12 +1,13 @@
 import logging
 import os
 
-from sanic import Sanic
+import sanic
 
-from function.handler import routing
+from function import handler
 
-app = Sanic(__name__)
-app.blueprint(routing)
+app = sanic.Sanic(__name__)
+app.blueprint(handler.bot.router)
+app.blueprint(handler.routing)
 
 
 def get_int(name: str, default: int) -> int:
